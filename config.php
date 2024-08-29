@@ -1,14 +1,13 @@
 <?php
-$servername = "localhost"; // andmebaasi serveri nimi (tavaliselt localhost)
-$username = "hnarep"; // kasutajanimi
-$password = "hnarep"; // parool
-$database = "muusikapood"; // andmebaasi nimi
-
-// Loome ühenduse andmebaasiga
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Kontrollime ühendust
-if ($conn -> connect_error) {
-    die("uhendus paha " . $conn->connect_error);
+//***protseduuriline***//
+//sinu andmed
+$db_server = 'localhost';
+$db_andmebaas = 'muusikapood';
+$db_kasutaja = 'hiimo';
+$db_salasona = 'hiimo';
+//ühendus andmebaasiga
+$yhendus = mysqli_connect($db_server, $db_kasutaja, $db_salasona, $db_andmebaas);
+//ühenduse kontroll
+if(!$yhendus){
+	die('Ei saa ühendust andmebaasiga');
 }
-?>
