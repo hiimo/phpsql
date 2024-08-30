@@ -26,8 +26,8 @@
         }
 
         $auto1 = new Auto;
-        echo $auto1 -> varv='kollane'.'<br>';
-        echo $auto1 -> tootja='banaan'.'<br>';
+        echo $auto1 -> varv='roheline'.'<br>';
+        echo $auto1 -> tootja='ahv'.'<br>';
         $auto1 -> vroom();
         ?>
         </div>
